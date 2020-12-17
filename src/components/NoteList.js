@@ -17,10 +17,9 @@ const NoteList = () => {
     }
 
     const onDelete = (key) => {
-        // console.log("works")
         settodoList((prevTodo) => {
-            console.log("prevtodo", prevTodo)
-            return prevTodo.filter(todo => console.log("todo",todo))
+            // FAIL, DOESNT WORK!
+            return prevTodo.filter(todo => todo.key != todoList.key)
         })
     }
 
@@ -33,7 +32,7 @@ const NoteList = () => {
                 <Text style={styles.text}>Your Todos</Text>
                 <Text style={styles.text}> {todoList.length} </Text>
             </View>
-            <FlatList keyExtractor={(item, index) => index.toString()} onContentSizeChange={() => flatList.current.scrollToEnd()} ref={flatList} data={todoList} renderItem={renderItem} />
+            <FlatList testID="list" keyExtractor={(item, index) => index.toString()} onContentSizeChange={() => flatList.current.scrollToEnd()} ref={flatList} data={todoList} renderItem={renderItem} />
             <View style={styles.footer} >
                 <Input onChangeText={(val) => setTodo((val))} />
                 <Button onSend={onAddTodo} />

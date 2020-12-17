@@ -1,15 +1,15 @@
 import React from 'react'
 import { StyleSheet, TextInput, View } from 'react-native'
 
-const Input = ({onChangeText}) => {
+const Input = ({ onChangeText }) => {
     return (
         <View style={styles.container} >
-            <TextInput onChangeText={onChangeText} placeholder="Add todo..." />
+            <TextInput testID="input" onChangeText={onChangeText} placeholder="Add todo..." />
         </View>
     )
 }
 
-export {Input}
+export { Input }
 
 const styles = StyleSheet.create({
     container: {

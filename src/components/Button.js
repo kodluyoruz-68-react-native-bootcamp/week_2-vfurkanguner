@@ -1,15 +1,15 @@
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 
-const Button = ({onSend}) => {
+const Button = ({ onSend }) => {
     return (
-        <TouchableOpacity onPress={() => onSend()} style={styles.container} >
+        <TouchableOpacity testID="button" onPress={() => onSend()} style={styles.container} >
             <Text style={styles.text} >Add</Text>
         </TouchableOpacity>
     )
 }
 
-export {Button}
+export { Button }
 
 const styles = StyleSheet.create({
     container: {
