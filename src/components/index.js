@@ -1,7 +1,7 @@
 export * from './Header' 
-//Flatlist component
+// //Flatlist component
 export * from './NoteList'; 
-export * from './Item'; 
-//FormBuilders component
+export * from './TodoRender'; 
+// //Form builder component
 export * from './Input'; 
-export * from './StyledButton';
+export * from './Button';

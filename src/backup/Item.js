@@ -3,10 +3,12 @@ import { StyleSheet, Text, View } from 'react-native'
 
 const Item = ({note}) => {
     return (
-        <View style={styles.container} >
+        <View  style={{flex: 1}}>
+            <View style={styles.container}>
             <View style={{flexDirection: 'row' }}>    
             <View style={styles.box} /> 
             <Text style={styles.text}>{note.title} </Text>
+            </View>
             </View>
         </View>
     )

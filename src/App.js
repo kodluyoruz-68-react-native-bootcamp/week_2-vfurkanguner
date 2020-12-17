@@ -1,7 +1,8 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, View } from 'react-native';
 import { Header, NoteList } from './components/';
-import FormBuilder from './modules/FormBuilder';
+
+
 
 
 /**
@@ -12,15 +13,14 @@ import FormBuilder from './modules/FormBuilder';
 
 function App() {
   return (
+
     <View style={styles.container}>
       <SafeAreaView style={styles.container} >
         <Header />
-        <View style={{ flex: 1 }}>
-          <NoteList />
-        </View>
-        <FormBuilder />
+        <NoteList />
       </SafeAreaView>
     </View>
+
   );
 }
 

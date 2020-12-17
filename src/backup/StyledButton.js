@@ -1,24 +1,24 @@
 import React from 'react'
-import {StyleSheet, Text, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 
 
-const StyledButton = ({onSend}) => {
+const StyledButton = ({note, onAddTodo }) => {
     return (
-        <TouchableOpacity testID="button" onPress={(val) => onSend(val)} style={styles.container}>
+        <TouchableOpacity testID="button" onPress={() => onAddTodo(text)} style={styles.container}>
             <Text style={styles.text} >Add</Text>
         </TouchableOpacity>
     )
 }
 
-export {StyledButton}
+export { StyledButton }
 
 const styles = StyleSheet.create({
     container: {
         justifyContent: 'center',
         alignItems: 'center',
-        width: '30%',
-        height: '70%',
-        borderRadius: 25,
+        width: 122,
+        height: 47,
+        borderRadius: 39,
         backgroundColor: '#F50057'
     },
     text: {
