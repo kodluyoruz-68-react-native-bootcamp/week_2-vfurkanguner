@@ -1,5 +1,9 @@
 import React from 'react';
-import {SafeAreaView, View, Text} from 'react-native';
+import { SafeAreaView, StyleSheet, View } from 'react-native';
+import { Header, NoteList } from './components/';
+
+
+
 
 /**
  * TextInput: testID="input" (component which is user types the todo text)
@@ -9,9 +13,22 @@ import {SafeAreaView, View, Text} from 'react-native';
 
 function App() {
   return (
-    // ...
-    null
+
+    <View style={styles.container}>
+      <SafeAreaView style={styles.container} >
+        <Header />
+        <NoteList />
+      </SafeAreaView>
+    </View>
+
   );
 }
 
 export default App;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#EDEDED"
+  }
+});
